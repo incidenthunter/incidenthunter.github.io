@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+
 from __future__ import unicode_literals
+import os
 
 AUTHOR = u'Incident Hunter'
 SITENAME = u'We are now in the decade of response'
@@ -20,10 +22,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = ()
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
@@ -33,3 +32,8 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+THEME = 'ghastly'
+DIRECT_TEMPLATES = (('index', 'archives', '404'))
+
+PLUGIN_PATHS = [ os.path.join(os.environ['HOME'], 'third-party', 'pelican-plugins')]
+PLUGINS = ['assets', 'sitemap', 'gravatar']
